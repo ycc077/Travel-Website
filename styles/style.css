@@ -1,0 +1,565 @@
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: SweiSpringCJKtc-Regular;
+  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-spring@1.068/WebFont/CJK%20TC/SweiSpringCJKtc-Regular.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/max32002/swei-spring@1.068/WebFont/CJK%20TC/SweiSpringCJKtc-Regular.woff)
+      format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei";
+  font-size: 17px;
+  line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/*animation*/
+@keyframes shake {
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes jump {
+  0%,
+  100% {
+    top: 30px;
+  }
+  50% {
+    top: 50px;
+  }
+}
+/*body*/
+body {
+  position: relative;
+}
+body img {
+  max-width: 100%;
+}
+body header {
+  height: 90px;
+  background-color: #80b6fc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+body header section.h-logo {
+  flex: 2 1 100px;
+}
+body header section.h-logo img {
+  width: 15vw;
+}
+body header nav {
+  flex: 5 1 500px;
+}
+body header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+}
+body header nav ul li {
+  position: relative;
+}
+body header nav ul li:nth-child(1) {
+  display: none;
+}
+body header nav ul li:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s linear;
+}
+body header nav ul li:hover:after {
+  width: 100%;
+  left: 0;
+}
+body header nav ul li a {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+body header nav ul li a i {
+  margin: 0 10px 10px 0;
+}
+body main div.container {
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+}
+body main section.background-image {
+  min-height: 90vh;
+  background-image: url(../images/banner1.png);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.75s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+body main section.background-image div.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body main section.background-image h3 {
+  font-family: SweiSpringCJKtc-Regular;
+  color: white;
+  font-size: 38px;
+  line-height: 65px;
+  text-align: center;
+}
+body main section.intro {
+  background-image: url(../images/bg-01.png);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+  position: relative;
+}
+body main section.intro div.plane {
+  position: absolute;
+  right: 8%;
+  animation: jump 4s linear infinite;
+}
+body main section.intro div.pic {
+  flex: 1 1 200px;
+  position: relative;
+}
+body main section.intro div.pic i {
+  position: absolute;
+  right: 12%;
+  bottom: 7%;
+  animation: shake 4s linear infinite;
+}
+body main section.intro div.intro-t {
+  flex: 1 1 280px;
+}
+body main section.intro div.intro-t h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 90px;
+  line-height: 90px;
+}
+body main section.intro div.intro-t h4 {
+  font-family: SweiSpringCJKtc-Regular;
+  padding: 2rem 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+body main section.intro div.intro-t div.btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+body main section.intro div.intro-t div.btn-box a {
+  width: 200px;
+  background: white;
+  border: 1px solid #d1d1d1;
+  color: gray;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.2s ease-in-out;
+}
+body main section.intro div.intro-t div.btn-box a:hover {
+  color: white;
+  background: #80b6fc;
+  border: 1px solid #80b6fc;
+}
+body main section.info-circles {
+  background-image: url(../images/bg-02.png);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+}
+body main section.info-circles h3 {
+  color: #666;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: auto;
+}
+body main section.info-circles div.circles {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+body main section.info-circles div.circles div.circle {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  transition: all 0.2s;
+}
+body main section.info-circles div.circles div.circle:hover {
+  transform: translateY(10px);
+  box-shadow: 0 0 10px #ccc;
+}
+body main section.info-circles div.circles div.circle img {
+  border-radius: 15px 15px 0 0;
+}
+body main section.info-circles div.circles div.circle h4 {
+  font-family: SweiSpringCJKtc-Regular;
+  font-size: 28px;
+  line-height: 32px;
+  padding-top: 1.5rem;
+}
+body main section.info-circles div.circles div.circle h4 img {
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-bottom: -3px;
+}
+body main section.info-circles div.circles div.circle p {
+  padding: 1.5rem;
+}
+body main section.news-bg {
+  background-image: url(../images/bg-03.png);
+  background-size: cover;
+  background-position: center;
+}
+body main section.news-bg div.news {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px 0;
+}
+body main section.news-bg div.news-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main section.news-bg div.news-title h3 {
+  color: white;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+body main section.news-bg div.news-title a {
+  width: 150px;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 5px 0;
+  transition: all 0.2s;
+}
+body main section.news-bg div.news-title a:hover {
+  background: #80b6fc;
+  border: 1px solid #80b6fc;
+}
+body main section.news-bg div.news-box ul {
+  max-width: 1300px;
+  margin: 50px auto 0 auto;
+}
+body main section.news-bg div.news-box li {
+  background: white;
+  padding: 1rem;
+  margin: 15px 0;
+  list-style: none;
+  border-radius: 8px;
+}
+body main section.news-bg div.news-box li p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  transition: all 0.1s;
+  position: relative;
+  padding-left: 25px;
+}
+body main section.news-bg div.news-box li p:before {
+  position: absolute;
+  content: url(../images/arrow.png);
+  width: 16px;
+  left: 0;
+  top: 3px;
+}
+body main section.news-bg div.news-box li p:hover {
+  transform: translateX(10px);
+  font-weight: bold;
+}
+body main section.news-bg div.news-box li span {
+  color: #8c8c8c;
+  font-size: 15px;
+  padding-right: 5px;
+}
+body footer {
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #80b6fc;
+}
+body footer section.f-logo img {
+  width: 9vw;
+}
+body footer section.links {
+  max-width: 1300px;
+  margin: auto;
+}
+body footer section.links div.f-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem 0;
+}
+body footer section.links div.f-menu ul li {
+  list-style: none;
+}
+body footer section.links div.f-menu ul a {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+body footer p {
+  width: 100%;
+  border-top: 1px solid #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  line-height: 40px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1200px) {
+  body main div.container {
+    padding: 0 5rem;
+  }
+  body main section.intro div.pic i {
+    right: -11%;
+  }
+  body main section.intro div.pic i img {
+    width: 70%;
+  }
+  body main section.intro div.plane {
+    right: 0;
+    left: 80%;
+  }
+  body main section.intro div.plane img {
+    width: 60%;
+  }
+  body main section.intro div.intro-t {
+    padding-left: 2rem;
+  }
+  body main section.intro div.intro-t h3 {
+    font-size: 70px;
+  }
+  body main section.news-bg div.news {
+    padding: 5.5rem 5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body main div.container {
+    flex-direction: column;
+  }
+  body main section.intro div.plane {
+    display: none;
+  }
+  body main section.intro div.pic {
+    padding-bottom: 2rem;
+  }
+  body main section.intro div.pic i {
+    right: 0;
+  }
+  body main section.intro div.intro-t h3 {
+    font-size: 65px;
+    text-align: center;
+  }
+  body main section.intro div.intro-t h4 {
+    font-size: 20px;
+    text-align: center;
+  }
+  body main section.intro div.intro-t p {
+    text-align: center;
+  }
+  body main section.intro div.intro-t div.btn-box {
+    justify-content: center;
+  }
+  body main section.intro div.intro-t div.btn-box a {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  body header {
+    padding: 0 20px;
+  }
+  body header nav ul li a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body header section.h-logo {
+    flex: 1 1 150px;
+  }
+  body header section.h-logo img {
+    width: 40vw;
+  }
+  body header nav {
+    flex: 5 1 200px;
+  }
+  body header nav ul {
+    justify-content: flex-end;
+  }
+  body header nav ul li {
+    margin: 0 10px;
+  }
+  body header nav ul li:nth-child(1) {
+    display: inline;
+  }
+  body header nav ul li:nth-child(2) {
+    display: none;
+  }
+  body header nav ul li:nth-child(3) {
+    display: none;
+  }
+  body header nav ul li:nth-child(4) {
+    display: none;
+  }
+  body header nav ul li:nth-child(5) {
+    display: none;
+  }
+  body main div.container {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  body main section.intro div.intro-t {
+    padding-left: 0;
+  }
+  body main section.intro div.intro-t h3 {
+    font-size: 48px;
+  }
+  body main section.info-circles {
+    background-image: url(../images/bg-02.png);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+  }
+  body main section.info-circles h3 {
+    color: #666;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: auto;
+  }
+  body main section.info-circles div.circles div.circle {
+    width: 47%;
+    margin: 1%;
+  }
+  body main section.info-circles div.circles div.circle p {
+    text-align: center;
+  }
+  body main section.news-bg div.news {
+    padding: 5.5rem 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  body header section.h-logo {
+    flex: 1 1 300px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  body header nav {
+    flex: 5 1 300px;
+  }
+  body header nav ul {
+    justify-content: center;
+  }
+  body main section.background-image {
+    min-height: 70vh;
+  }
+  body main section.background-image div.filter {
+    min-height: 70vh;
+  }
+  body main section.background-image h3 {
+    font-size: 24px;
+    line-height: 42px;
+  }
+  body main section.intro div.pic i {
+    width: 30vw;
+  }
+  body main section.intro div.intro-t h4 {
+    font-size: 18px;
+  }
+  body main section.intro div.intro-t div.btn-box a {
+    width: 120px;
+    font-size: 15px;
+    padding: 0.2rem;
+  }
+  body main section.info-circles h3 {
+    font-size: 30px;
+  }
+  body main section.info-circles div.circles div.circle {
+    width: 98%;
+    margin: 2% 1%;
+  }
+  body main section.news-bg div.news-title h3 {
+    font-size: 30px;
+  }
+  body main section.news-bg div.news-title a {
+    width: 120px;
+    font-size: 14px;
+    padding: 0;
+  }
+  body footer section.f-logo img {
+    width: 35vw;
+  }
+  body footer section.links div.f-menu ul a {
+    font-size: 16px;
+  }
+} /*# sourceMappingURL=style.css.map */
