@@ -534,6 +534,19 @@ body {
         }
       }
     }
+    main {
+      section.info-circles {
+        div.circles {
+          div.circle {
+            width: 47%;
+            margin: 1%;
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -599,16 +612,6 @@ body {
           font-weight: 500;
           letter-spacing: 3px;
           margin: auto;
-        }
-
-        div.circles {
-          div.circle {
-            width: 47%;
-            margin: 1%;
-            p {
-              text-align: center;
-            }
-          }
         }
       }
       section.news-bg {
