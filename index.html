@@ -202,10 +202,31 @@
           </ul>
         </div>
       </section>
-      <p>Website practice by Chi 2024</p>
+      <p>
+        Designed by 77<br />
+        Copyright © 2024 Expedia, brgfx, alvaro_cabrera, on Freepik
+      </p>
     </footer>
-
-    <!--banner特效-->
+    <!--totop-->
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#BackTop").click(function () {
+          $("html,body").animate({ scrollTop: 0 }, 333);
+        });
+        $(window)
+          .scroll(function () {
+            if ($(this).scrollTop() > 300) {
+              $("#BackTop").fadeIn(222);
+            } else {
+              $("#BackTop").stop().fadeOut(222);
+            }
+          })
+          .scroll();
+      });
+    </script>
+    <!--banner-->
     <script>
       setInterval(() => {
         let topBackground = document.querySelector("section.background-image");
@@ -223,7 +244,7 @@
       }, 3000);
     </script>
 
-    <!--滑入特效-->
+    <!--fade-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>

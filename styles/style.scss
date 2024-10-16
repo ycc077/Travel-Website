@@ -1,7 +1,5 @@
 /*font*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap");
 
 @font-face {
   font-family: SweiSpringCJKtc-Regular;
@@ -129,6 +127,7 @@ body {
   }
 
   main {
+    overflow-x: hidden;
     div.container {
       max-width: 1300px;
       display: flex;
@@ -427,11 +426,50 @@ body {
       border-top: 1px solid #fff;
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
-      line-height: 40px;
-      font-size: 15px;
-      letter-spacing: 1px;
+      line-height: 22px;
+      font-size: 12px;
       margin-top: 20px;
       color: rgba(255, 255, 255, 0.7);
+      padding: 0.5rem 0;
+    }
+  }
+  .toTop-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #8c8c8c;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+    &::before {
+      transform: rotate(-45deg) translate(0, -50%);
+      top: 1.2rem;
+      left: 0.5rem;
+      width: 17px;
+      height: 3px;
+      border-radius: 3px;
+      background: white;
+      position: absolute;
+      content: "";
+    }
+    &::after {
+      transform: rotate(45deg) translate(0, -50%);
+      top: 1.2rem;
+      right: 0.5rem;
+      width: 17px;
+      height: 3px;
+      border-radius: 3px;
+      background: white;
+      position: absolute;
+      content: "";
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
